@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.dagger:dagger:2.44'
+    //Підключення основної бібліотеки Dagger для ін'єкції залежностей
+
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.44'
+    //Підключення процесора анотацій Dagger, який генерує код під час компіляції
+
+    implementation 'com.google.code.gson:gson:2.10'
+    //Підключення бібліотеки Gson для роботи з JSON
+
+    testImplementation 'junit:junit:4.13.2'
+    //Додає JUnit як бібліотеку для написання юніт-тестів
+}

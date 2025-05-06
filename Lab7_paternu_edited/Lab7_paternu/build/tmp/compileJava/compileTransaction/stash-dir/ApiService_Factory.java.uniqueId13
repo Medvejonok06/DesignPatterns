@@ -1,0 +1,44 @@
+import com.google.gson.Gson;
+import dagger.internal.DaggerGenerated;
+import dagger.internal.Factory;
+import dagger.internal.QualifierMetadata;
+import dagger.internal.ScopeMetadata;
+import javax.annotation.processing.Generated;
+import javax.inject.Provider;
+
+@ScopeMetadata
+@QualifierMetadata
+@DaggerGenerated
+@Generated(
+    value = "dagger.internal.codegen.ComponentProcessor",
+    comments = "https://dagger.dev"
+)
+@SuppressWarnings({
+    "unchecked",
+    "rawtypes"
+})
+public final class ApiService_Factory implements Factory<ApiService> {
+  private final Provider<Gson> gsonProvider;
+
+  private final Provider<Dependency1> dependency1Provider;
+
+  public ApiService_Factory(Provider<Gson> gsonProvider,
+      Provider<Dependency1> dependency1Provider) {
+    this.gsonProvider = gsonProvider;
+    this.dependency1Provider = dependency1Provider;
+  }
+
+  @Override
+  public ApiService get() {
+    return newInstance(gsonProvider.get(), dependency1Provider.get());
+  }
+
+  public static ApiService_Factory create(Provider<Gson> gsonProvider,
+      Provider<Dependency1> dependency1Provider) {
+    return new ApiService_Factory(gsonProvider, dependency1Provider);
+  }
+
+  public static ApiService newInstance(Gson gson, Dependency1 dependency1) {
+    return new ApiService(gson, dependency1);
+  }
+}

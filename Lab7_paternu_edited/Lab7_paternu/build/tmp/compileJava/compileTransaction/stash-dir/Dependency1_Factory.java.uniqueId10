@@ -1,0 +1,35 @@
+import dagger.internal.DaggerGenerated;
+import dagger.internal.Factory;
+import dagger.internal.QualifierMetadata;
+import dagger.internal.ScopeMetadata;
+import javax.annotation.processing.Generated;
+
+@ScopeMetadata
+@QualifierMetadata
+@DaggerGenerated
+@Generated(
+    value = "dagger.internal.codegen.ComponentProcessor",
+    comments = "https://dagger.dev"
+)
+@SuppressWarnings({
+    "unchecked",
+    "rawtypes"
+})
+public final class Dependency1_Factory implements Factory<Dependency1> {
+  @Override
+  public Dependency1 get() {
+    return newInstance();
+  }
+
+  public static Dependency1_Factory create() {
+    return InstanceHolder.INSTANCE;
+  }
+
+  public static Dependency1 newInstance() {
+    return new Dependency1();
+  }
+
+  private static final class InstanceHolder {
+    private static final Dependency1_Factory INSTANCE = new Dependency1_Factory();
+  }
+}
